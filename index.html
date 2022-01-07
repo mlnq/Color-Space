@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    <div class="title">Przestrzenie barw. Michał Mlenko</div>
+
+    <div class="container" >
+                <a href="./colorPicker.html">Konwersja przestrzeni barw</a>
+                <a href="./cubeRGB.html">Rysowanie kostki RGB</a>
+        </div>
+    </div>
+</body>
+<style>
+
+        .title{
+            display:flex;
+            justify-content: center;
+            margin: 20px;
+            font-size: 30px;
+            color:#ddd;
+        }
+        a{
+            text-decoration: none;
+            color:aliceblue;
+            background-color: none;
+            /* background-color: #111; */
+            border: 2px solid #333;
+            padding: 1em;
+            border-radius: 20px;
+            margin:5px;
+            transition-duration: 0.8s;
+            transition: cubic-bezier();
+        }
+        a:hover{
+            color:#111;
+            background: #ddd;
+        }
+
+        body{
+            font-family: 'ubuntu';
+            background-color: #111;
+            transition: background-color 4s;
+        }
+
+        .container{
+            display: flex;
+            justify-content: center;
+             align-items: center;
+             height: 100vh;
+        }
+</style>
+<script>
+setInterval(ChgBg(), 4000);
+
+function ChgBg() {
+    let i = 0;
+    const colors = ["#fa3232", "#039963", "#103e9c","#111"];
+    tmr = function() {
+
+        document.body.style.background = colors[i];
+        i = i<colors.length-1? i+1: 0;
+    }
+    
+    return tmr;
+}
+</script>
+</html>

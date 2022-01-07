@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    <div class="container">
+        <div id="content" style="width: 100px; display:flex;align-items:center; justify-content: center; flex-direction: column;" >
+<!-- colorBOX -->
+            <div id='colorContainer' class="colorContainer">
+                <span id="hash" style='font-size: 20px; display: flex; justify-content: center;'></span>
+            </div>
+            
+            <div style="display: flex; flex-direction: row;"  >
+                <!--<div class="toolbox">
+                    <strong style="font-size: 1.2em;">CMYK</strong>
+                    <div style="flex-direction: column; ">
+                        <div style="margin-left: 10px; " id="sliderLogC" data-color='C'>C:1</div>
+                        <div class="slidecontainer">
+                            <input type="range" 
+                            min="1" 
+                            max="100" 
+                            value="0" 
+                            class="slider" id="sliderC">
+                        </div>
+                    </div>
+                    <div style="flex-direction: column; ">
+                        <div style="margin-left: 10px;" id="sliderLogM" data-color='M'>M:1</div>
+                        <div class="slidecontainer">
+                            <input type="range" 
+                            min="1" 
+                            max="100" 
+                            value="0" 
+                            class="slider" id="sliderM">
+                        </div>
+                    </div>
+                    <div style="flex-direction: column; ">
+                        <div style="margin-left: 10px;" id="sliderLogY" data-color='Y'>Y:1</div>
+                        <div class="slidecontainer">
+                            <input type="range" 
+                            min="1" 
+                            max="100" 
+                            value="0" 
+                            class="slider" id="sliderY">
+                        </div>
+                    </div>
+                    <div style="flex-direction: column; ">
+                        <div style="margin-left: 10px;" id="sliderLogK" data-color='K'>K:1</div>
+                        <div class="slidecontainer">
+                            <input type="range" 
+                            min="1" 
+                            max="100" 
+                            value="0" 
+                            class="slider" id="sliderK">
+                        </div>
+                    </div>
+                </div>-->
+                <div class="toolbox">
+                    <strong style="font-size: 1.2em;">RGB</strong>
+                    <div style="flex-direction: column; ">
+                        <input style="margin-left: 10px;  width:30px" id="sliderLogRGB" data-color='R'>R</input>
+                        <div class="slidecontainer">
+                            <input type="range" 
+                            min="0" 
+                            max="255" 
+                            value="0" 
+                            class="slider" id="sliderRGB" data-color='R'>
+                        </div>
+                        <input style="margin-left: 10px;  width:30px " id="sliderLogRGB" data-color='G'>G</input>
+                        <div class="slidecontainer">
+                            <input type="range" 
+                            min="0" 
+                            max="255" 
+                            value="0" 
+                            class="slider" id="sliderRGB" data-color='G'>
+                        </div>
+                        <input style="margin-left: 10px;  width:30px " id="sliderLogRGB" data-color='B'>B</input>
+                        <div class="slidecontainer">
+                            <input type="range" 
+                            min="0" 
+                            max="255" 
+                            value="0" 
+                            class="slider" id="sliderRGB" data-color='B'>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="toolbox">
+                    <strong style="font-size: 1.2em;">CMYK</strong>
+                    <div style="flex-direction: column; ">
+                        <input style="margin-left: 10px;  width:30px" id="sliderLogCMYK" data-color='C'>C</input>
+                        <div class="slidecontainer">
+                            <input type="range" 
+                            min="0" 
+                            max="100" 
+                            value="0" 
+                            class="slider" id="sliderCMYK" data-color='C'>
+                        </div>
+                        <input style="margin-left: 10px;  width:30px " id="sliderLogCMYK" data-color='M'>M</input>
+                        <div class="slidecontainer">
+                            <input type="range" 
+                            min="0" 
+                            max="100" 
+                            value="0" 
+                            class="slider" id="sliderCMYK" data-color='M'>
+                        </div>
+                        <input style="margin-left: 10px;  width:30px " id="sliderLogCMYK" data-color='Y'>Y</input>
+                        <div class="slidecontainer">
+                            <input type="range" 
+                            min="0" 
+                            max="100" 
+                            value="0" 
+                            class="slider" id="sliderCMYK" data-color='Y'>
+                        </div>
+                        <input style="margin-left: 10px;  width:30px " id="sliderLogCMYK" data-color='K'>K</input>
+                        <div class="slidecontainer">
+                            <input type="range" 
+                            min="0" 
+                            max="100" 
+                            value="0" 
+                            class="slider" id="sliderCMYK" data-color='K'>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+</body>
+<style>
+
+    body{
+        background-color: #111;
+    }
+
+    *{
+        font-family:'Lato', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 500;
+    }
+
+    .toolbox{
+        justify-content: center ;
+        align-items: center;
+        margin: 100px 0;
+        display:flex;
+        width: 20vw;
+        flex-direction: column;
+        background-color: #555;
+        color: #fff;
+        border: 3px solid #333;
+        border-radius: 25px;
+    }
+
+    .colorContainer{
+        width: 20em;
+        height: 20em;
+        border: 3px solid #333;
+        border-radius: 25px;
+        background-color: #fff;
+
+    }
+
+    .container{
+        
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .slider {
+        margin: 10px;
+        -webkit-appearance: none;  /* Override default CSS styles */
+        appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+  border-radius: 10px;
+  
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.slider:hover {
+  opacity: 1;
+}
+
+input{
+    background: transparent;
+border-radius: 5px;
+border: white solid 0.5px;
+color: white;
+}
+</style>
+<script src="colorPicker.js"> </script>
+</html>
